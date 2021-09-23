@@ -1,5 +1,5 @@
 
-/*created by prashant shukla */
+/*created by prashant shukla
 
 var paddle2 =10,paddle1=10;
 
@@ -20,11 +20,6 @@ var ball = {
     dx:3,
     dy:3
 }
-
-function setup(){
-  var canvas =  createCanvas(700,600);
-}
-
 
 function draw(){
 
@@ -161,4 +156,10 @@ function paddleInCanvas(){
   if(mouseY < 0){
     mouseY =0;
   }  
+}*/
+
+
+function setup(){
+  canvas =  createCanvas(550,460);
+  canvas.center();
 }

@@ -17,5 +17,10 @@
 }
 
 canvas{
-    margin-left: 320px;
+    border: 2px solid white;
+}
+
+.restart{
+    bottom: 0;
+    position: fixed;
 }

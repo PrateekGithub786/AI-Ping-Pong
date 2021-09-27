@@ -162,4 +162,13 @@ function paddleInCanvas(){
 function setup(){
   canvas =  createCanvas(550,460);
   canvas.center();
+  canvas.parent("canvas");
+
+  video = createCapture(VIDEO);
+  video.size(550,460);
+  video.hide();
+}
+
+function darw(){
+  image(video, 550, 460, 0, 0);
 }

@@ -158,17 +158,22 @@ function paddleInCanvas(){
   }  
 }*/
 
-
 function setup(){
-  canvas =  createCanvas(550,460);
-  canvas.center();
-  canvas.parent("canvas");
-
+  var canvas =  createCanvas(700,600);
+  canvas.parent('canvas');
+  
   video = createCapture(VIDEO);
-  video.size(550,460);
+  video.size(700, 600);
   video.hide();
+  
+  poseNet = ml5.poseNet(video, modelLoaded);
+  poseNet.on('pose', gotPoses);
+}
+
+function modelLoaded(){
+  console.log("Model is Loaded");
 }
 
 function darw(){
-  image(video, 550, 460, 0, 0);
+  image(video, 0, 0, 700, 600);
 }
